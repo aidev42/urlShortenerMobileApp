@@ -1,0 +1,20 @@
+<ion-view title="TinyURL Project">
+  <ion-nav-buttons side="left">
+    <button class="right button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" ng-model="longURL" placeholder="http://"></input>
+        </label>
+      </div>
+      <div class="padding-left padding-right">
+        <div class="button-bar">
+          <!-- The mention here to longURL references the one above in ng-model, which is designating the variable -->
+          <a class="button" ng-click="shorten(longURL)">Shorten</a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

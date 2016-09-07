@@ -1,0 +1,23 @@
+<ion-view title="TinyURL Project" ng-init="init()">
+  <ion-nav-buttons side="right">
+    <button class="right button button-icon icon ion-plus" ui-sref="create"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <!-- EVERYTHING GOES HERE -->
+    <ion-list show-delete="false" can-swipe="true">
+      <ion-item ng-repeat="(key, value) in URLs" ng-click="open(key)">
+        <div class ="row">
+          <div class="col">
+            <strong>{{value.shortURL}}</strong>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="col">
+            {{value.longURL}}
+          </div>
+        </div>
+        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(key)"></ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
